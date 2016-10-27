@@ -15,3 +15,5 @@ set hlsearch
 syntax on
 
 "colorscheme zenburn
+
+:imap jj <Esc>
