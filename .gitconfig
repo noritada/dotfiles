@@ -1,3 +1,6 @@
 [user]
 	name = Noritada Kobayashi
 	email = koba-n@wni.com
+[core]
+	excludesfile = /Users/noritada/.gitignore
+	quotepath = false
