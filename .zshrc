@@ -26,3 +26,12 @@ RPROMPT='%B%m:%~%b'
 export PYTHONPATH=$HOME/lib/python2.6/site-packages:/usr/local/lib/python2.7/site-packages
 export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+
+# Backward killing for paths/URLs.
+tcsh-backward-delete-word () {
+  local WORDCHARS="${WORDCHARS:s#/#}"
+  zle backward-delete-word
+}
+
+zle -N tcsh-backward-delete-word
+bindkey '^W' tcsh-backward-delete-word
