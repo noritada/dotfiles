@@ -1,6 +1,7 @@
 # MacPorts Installer addition on 2009-10-05_at_11:45:06: adding an appropriate PATH variable for use with MacPorts.
 #export PATH=$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:$HOME/bin:/usr/texbin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:$HOME/bin:/usr/texbin:/opt/local/bin:/opt/local/sbin:$PATH
+
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
