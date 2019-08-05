@@ -1,3 +1,15 @@
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" Custom configurations
 set encoding=utf-8
 set fileencodings=iso-2022-jp,sjis,euc-jp,utf-8
 
