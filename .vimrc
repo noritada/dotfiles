@@ -14,6 +14,14 @@ filetype plugin indent on
 set t_Co=256
 colors zenburn
 " }}}
+" UI Layout {{{
+set number
+set showcmd
+set cursorline
+set wildmenu
+set lazyredraw
+set showmatch
+" }}}
 " Searching {{{
 set incsearch
 set hlsearch
