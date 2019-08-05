@@ -5,9 +5,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Zenburn'
 
 call vundle#end()
 filetype plugin indent on
+
+" Colors
+set t_Co=256
+colors zenburn
 
 " Custom configurations
 set encoding=utf-8
@@ -19,13 +24,10 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ENC=%{&fileencoding}]\ [
 au BufRead,BufNewFile *.vcl :set vt=vcl
 au! Syntax vcl source ~/.vim/vcl.vim
 
-"set t_Co=256
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
 set incsearch
 set hlsearch
 syntax on
-
-"colorscheme zenburn
 
 :imap jj <Esc>
