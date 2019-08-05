@@ -1,4 +1,4 @@
-" Vundle
+" Vundle {{{
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -9,12 +9,22 @@ Plugin 'Zenburn'
 
 call vundle#end()
 filetype plugin indent on
-
-" Colors
+" }}}
+" Colors {{{
 set t_Co=256
 colors zenburn
+" }}}
+" Folding {{{
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
 
-" Custom configurations
+" space open/closes folds
+nnoremap <space> za
+
+set foldmethod=indent
+" }}}
+" Custom configurations {{{
 set encoding=utf-8
 set fileencodings=iso-2022-jp,sjis,euc-jp,utf-8
 
@@ -31,3 +41,7 @@ set hlsearch
 syntax on
 
 :imap jj <Esc>
+" }}}
+
+set modelines=1
+" vim:foldmethod=marker:foldlevel=0
