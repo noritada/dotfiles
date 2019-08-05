@@ -14,6 +14,10 @@ filetype plugin indent on
 set t_Co=256
 colors zenburn
 " }}}
+" Searching {{{
+set incsearch
+set hlsearch
+" }}}
 " Folding {{{
 set foldenable
 set foldlevelstart=10
@@ -36,8 +40,6 @@ au! Syntax vcl source ~/.vim/vcl.vim
 
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
-set incsearch
-set hlsearch
 syntax on
 
 :imap jj <Esc>
