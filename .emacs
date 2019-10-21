@@ -22,3 +22,4 @@
  )
 
 (load-theme 'zenburn t)
+(setq-default require-final-newline nil)
