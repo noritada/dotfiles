@@ -5,6 +5,9 @@
 mkdir ~/Desktop/screenshots
 defaults write com.apple.screencapture location ~/Desktop/screenshots
 
+# install Homebrew (see https://brew.sh/index_ja )
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # install rustup (see https://rustup.rs/ )
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -28,8 +31,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ## others
 * Command Line Tools for Xcode
   * Terminalにてgccコマンドを叩いてトリガー
-* Homebrew
-  * /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ## from Homebrew
   * wget
