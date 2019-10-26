@@ -1,3 +1,11 @@
+# Configs using command line
+
+```
+# screenshot save location
+mkdir ~/Desktop/screenshots
+defaults write com.apple.screencapture location ~/Desktop/screenshots
+```
+
 # Apps
 
 ## from App Store
