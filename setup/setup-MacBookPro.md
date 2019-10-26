@@ -89,6 +89,7 @@
 * minimap
 * project-manager
 * tablr
+* markdown-pdf
 
 
 # Misc
