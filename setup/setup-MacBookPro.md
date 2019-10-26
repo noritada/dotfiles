@@ -4,6 +4,9 @@
 # screenshot save location
 mkdir ~/Desktop/screenshots
 defaults write com.apple.screencapture location ~/Desktop/screenshots
+
+# install rustup (see https://rustup.rs/ )
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 # Apps
@@ -38,7 +41,6 @@ defaults write com.apple.screencapture location ~/Desktop/screenshots
   * git
   * cmake
   * cairo
-  * rust
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
