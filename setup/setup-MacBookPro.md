@@ -36,6 +36,7 @@
 * adobe-acrobat-reader
 * calibre
 * emacs
+* microsoft-remote-desktop-beta
 * slack
 * vlc
 
