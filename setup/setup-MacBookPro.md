@@ -19,16 +19,6 @@
   * Terminalにてgccコマンドを叩いてトリガー
 * Homebrew
   * /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-* Emacs
-  * brew cask install emacs
-* VLC
-  * brew cask install vlc
-* Adobe Acrobat Reader DC
-  * brew cask install adobe-acrobat-reader
-* Slack
-  * brew cask install slack
-* Calibre
-  * brew cask install calibre
 
 ## from Homebrew
   * wget
@@ -41,6 +31,13 @@
   * cmake
   * cairo
   * rust
+
+## from Homebrew Cask
+* adobe-acrobat-reader
+* calibre
+* emacs
+* slack
+* vlc
 
 ## from cargo
   * wasm-pack
