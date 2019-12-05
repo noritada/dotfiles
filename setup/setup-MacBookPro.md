@@ -47,17 +47,20 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   * cairo
   * neomutt
   * w3m
+  * protobuf
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
 * calibre
 * emacs
 * microsoft-remote-desktop-beta
+* postman
 * slack
 * vlc
 
 ## from cargo
-  * wasm-pack
+* wasm-pack
+* mdbook
 
 
 # Dock
