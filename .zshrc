@@ -26,3 +26,7 @@ tcsh-backward-delete-word () {
 
 zle -N tcsh-backward-delete-word
 bindkey '^W' tcsh-backward-delete-word
+
+fpath+=~/.zfunc
+autoload -U compinit
+compinit
