@@ -6,6 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Zenburn'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
