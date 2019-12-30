@@ -13,6 +13,7 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 
 # install rustup (see https://rustup.rs/ )
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rustfmt
 ```
 
 # Apps
