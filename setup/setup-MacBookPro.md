@@ -49,6 +49,10 @@ rustup component add rustfmt
   * neomutt
   * w3m
   * protobuf
+  * wabt
+  * ansible
+  * ffmpeg
+  * poppler
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
