@@ -67,6 +67,7 @@ rustup component add rustfmt
 * awscli
 * requests
 * Sphinx
+* sphinx-intl
 
 ## from cargo
 * wasm-pack
