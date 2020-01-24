@@ -63,11 +63,15 @@ rustup component add rustfmt
 * slack
 * vlc
 
+## from pip3
+* awscli
+* requests
+* Sphinx
+
 ## from cargo
 * wasm-pack
 * mdbook
 * wasm-bindgen-cli
-
 
 # Dock
 * 上記追加インストールアプリ
