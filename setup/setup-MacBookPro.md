@@ -53,6 +53,7 @@ rustup component add rustfmt
   * ansible
   * ffmpeg
   * poppler
+  * pandoc
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
@@ -68,6 +69,8 @@ rustup component add rustfmt
 * requests
 * Sphinx
 * sphinx-intl
+* sphinx_rtd_theme
+* nbsphinx
 
 ## from cargo
 * wasm-pack
