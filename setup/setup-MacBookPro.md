@@ -65,6 +65,7 @@ rustup component add rustfmt
 * postman
 * slack
 * vlc
+* drawio
 
 ## from pip3
 * awscli
