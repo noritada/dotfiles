@@ -54,6 +54,8 @@ rustup component add rustfmt
   * ffmpeg
   * poppler
   * pandoc
+  * aspell
+  * git-gui
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
