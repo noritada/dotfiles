@@ -1,4 +1,4 @@
-export PATH=$HOME/.cargo/bin:$HOME/.nodebrew/current/bin:$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:$HOME/.local/bin:$HOME/bin:/usr/texbin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/.nodebrew/current/bin:$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:$HOME/.local/bin:$HOME/bin:/usr/texbin:/usr/local/opt/gettext/bin:$PATH
 export MANPATH=$MANPATH
 
 export RUBYOPT=rubygems
