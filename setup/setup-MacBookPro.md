@@ -76,6 +76,8 @@ rustup component add rustfmt
 * sphinx_rtd_theme
 * nbsphinx
 * ipython
+* black
+* pytest
 
 ## from cargo
 * wasm-pack
