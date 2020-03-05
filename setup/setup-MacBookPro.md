@@ -56,6 +56,7 @@ rustup component add rustfmt
   * pandoc
   * aspell
   * git-gui
+  * gh
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
