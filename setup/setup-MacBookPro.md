@@ -78,6 +78,7 @@ rustup component add rustfmt
 * ipython
 * black
 * pytest
+* pytest-html
 
 ## from cargo
 * wasm-pack
