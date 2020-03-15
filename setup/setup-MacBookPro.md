@@ -84,6 +84,7 @@ rustup component add rustfmt
 * wasm-pack
 * mdbook
 * wasm-bindgen-cli
+* monolith
 
 # Dock
 * 上記追加インストールアプリ
