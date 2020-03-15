@@ -57,6 +57,7 @@ rustup component add rustfmt
   * aspell
   * git-gui
   * gh
+  * nodebrew
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
@@ -67,6 +68,13 @@ rustup component add rustfmt
 * slack
 * vlc
 * drawio
+
+## from npm
+
+* copy-webpack-plugin
+* npm
+* webpack
+* webpack-dev-server
 
 ## from pip3
 * awscli
