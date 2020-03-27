@@ -68,6 +68,7 @@ rustup component add rustfmt
 * slack
 * vlc
 * drawio
+* zoomus
 
 ## from npm
 
