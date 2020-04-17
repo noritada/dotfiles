@@ -58,6 +58,7 @@ rustup component add rustfmt
   * git-gui
   * gh
   * nodebrew
+  * exiftool
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
