@@ -14,6 +14,9 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 # install rustup (see https://rustup.rs/ )
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rustfmt
+
+# install cn (see https://github.com/ceph/cn )
+curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd64 -o ~/bin/cn && chmod +x ~/bin/cn
 ```
 
 # Apps
