@@ -62,6 +62,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
   * gh
   * nodebrew
   * exiftool
+  * minio/stable/minio
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
@@ -73,6 +74,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
 * vlc
 * drawio
 * zoomus
+* brave-browser
 
 ## from npm
 
@@ -98,6 +100,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
 * mdbook
 * wasm-bindgen-cli
 * monolith
+* procs
 
 # Dock
 * 上記追加インストールアプリ
