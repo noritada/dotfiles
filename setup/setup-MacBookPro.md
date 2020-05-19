@@ -1,7 +1,8 @@
 # Configs using command line
 
 ```
-# screenshot save location
+# settings for screenshots
+defaults write com.apple.screencapture name ss
 mkdir ~/Desktop/screenshots
 defaults write com.apple.screencapture location ~/Desktop/screenshots
 
