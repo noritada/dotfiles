@@ -8,6 +8,9 @@ defaults write com.apple.screencapture location ~/Desktop/screenshots
 # disable auto swoosh (automatic space switching)
 defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 
+# disable auto spelling correction
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
 # install Homebrew (see https://brew.sh/index_ja )
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
