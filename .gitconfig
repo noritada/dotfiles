@@ -4,3 +4,7 @@
 [core]
 	excludesfile = /Users/noritada/.gitignore
 	quotepath = false
+[http]
+	postBuffer = 1048576000
+[credential]
+	helper = osxkeychain
