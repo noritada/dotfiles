@@ -24,3 +24,14 @@
 (load-theme 'zenburn t)
 (setq-default require-final-newline nil)
 (global-set-key (kbd "C-x C-j") 'skk-mode)
+
+(setq initial-frame-alist
+      (append (list
+	       ;; location
+	       '(top . 0)
+	       '(left . 0)
+	       ;; size
+	       '(width . 100)
+	       '(height . 55))
+	      initial-frame-alist))
+(setq default-frame-alist initial-frame-alist)
