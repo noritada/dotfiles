@@ -70,6 +70,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
   * exiftool
   * minio/stable/minio
   * parallel
+  * vbindiff
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
@@ -82,6 +83,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
 * drawio
 * zoomus
 * brave-browser
+* wireshark
 
 ## from npm
 
