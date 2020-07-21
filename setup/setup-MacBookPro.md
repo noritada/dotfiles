@@ -72,6 +72,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
   * parallel
   * vbindiff
   * fortune
+  * telnet
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
