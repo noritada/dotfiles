@@ -37,3 +37,7 @@
 	       '(height . 55))
 	      initial-frame-alist))
 (setq default-frame-alist initial-frame-alist)
+
+;; workaround for an issue that "/" is used both as default-directory
+;; and as command-line-default-directory
+(setq-default command-line-default-directory "~/")
