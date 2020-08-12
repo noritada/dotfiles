@@ -105,6 +105,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
 * black
 * pytest
 * pytest-html
+* recommonmark
 
 ## from cargo
 * wasm-pack
