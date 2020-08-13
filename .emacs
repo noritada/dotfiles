@@ -41,3 +41,6 @@
 ;; workaround for an issue that "/" is used both as default-directory
 ;; and as command-line-default-directory
 (setq-default command-line-default-directory "~/")
+
+;; key bindings
+(global-set-key "\C-x\C-b" 'ibuffer)
