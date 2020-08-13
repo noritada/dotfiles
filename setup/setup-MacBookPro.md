@@ -113,6 +113,7 @@ curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd
 * wasm-bindgen-cli
 * monolith
 * procs
+* pyflow
 
 # Dock
 * 上記追加インストールアプリ
