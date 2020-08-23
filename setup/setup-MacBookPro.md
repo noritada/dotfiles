@@ -23,6 +23,9 @@ rustup target add x86_64-pc-windows-gnu
 
 # install cn (see https://github.com/ceph/cn )
 curl -L https://github.com/ceph/cn/releases/download/v2.3.1/cn-v2.3.1-darwin-amd64 -o ~/bin/cn && chmod +x ~/bin/cn
+
+# install Poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
 
 # Apps
