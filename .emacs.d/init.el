@@ -29,5 +29,27 @@
   :custom `((custom-file . ,(locate-user-emacs-file "custom.el"))))
 ;; }}}
 
+;; leaf-related packages {{{
+(leaf leaf-convert :ensure t)
+(leaf leaf-tree
+  :ensure t
+  :custom ((imenu-list-size . 30)
+           (imenu-list-position . 'left)))
+;; }}}
+
+;; Major mode packages {{{
+(leaf graphql-mode :ensure t)
+(leaf po-mode :ensure t)
+(leaf review-mode :ensure t)
+(leaf rust-mode :ensure t)
+;; }}}
+
+;; Other packages {{{
+(leaf skk
+  :ensure ddskk
+  :require t skk-study skk-hint
+  :bind (("C-x C-j" . skk-mode)))
+;; }}}
+
 (provide 'init)
 ;; vim:foldmethod=marker:foldlevel=0
