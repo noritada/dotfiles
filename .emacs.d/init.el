@@ -22,5 +22,12 @@
     (leaf-keywords-init)))
 ;; }}}
 
+;; Emacs built-in packages {{{
+(leaf cus-edit
+  :doc "tools for customizing Emacs and Lisp packages"
+  :tag "builtin" "faces" "help"
+  :custom `((custom-file . ,(locate-user-emacs-file "custom.el"))))
+;; }}}
+
 (provide 'init)
 ;; vim:foldmethod=marker:foldlevel=0
