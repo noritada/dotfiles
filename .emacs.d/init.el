@@ -65,6 +65,78 @@
 (leaf rust-mode :ensure t)
 ;; }}}
 
+;; ivy-related packages {{{
+(leaf ivy
+  :doc "Incremental Vertical completYon"
+  :req "emacs-24.5"
+  :tag "matching" "emacs>=24.5"
+  :url "https://github.com/abo-abo/swiper"
+  :emacs>= 24.5
+  :ensure t
+  :blackout t
+  :leaf-defer nil
+  :custom ((ivy-initial-inputs-alist . nil)
+           (ivy-re-builders-alist . '((t . ivy--regex-fuzzy)
+                                      (swiper . ivy--regex-plus)))
+           (ivy-use-selectable-prompt . t))
+  :global-minor-mode t
+  :config
+  (leaf swiper
+    :doc "Isearch with an overview. Oh, man!"
+    :req "emacs-24.5" "ivy-0.13.0"
+    :tag "matching" "emacs>=24.5"
+    :url "https://github.com/abo-abo/swiper"
+    :emacs>= 24.5
+    :ensure t
+    :bind (("C-s" . swiper)))
+
+  (leaf counsel
+    :doc "Various completion functions using Ivy"
+    :req "emacs-24.5" "swiper-0.13.0"
+    :tag "tools" "matching" "convenience" "emacs>=24.5"
+    :url "https://github.com/abo-abo/swiper"
+    :emacs>= 24.5
+    :ensure t
+    :blackout t
+    :bind (("C-S-s" . counsel-imenu)
+           ("C-x C-r" . counsel-recentf))
+    :custom `((counsel-yank-pop-separator . "\n----------\n")
+              (counsel-find-file-ignore-regexp . ,(rx-to-string '(or "./" "../") 'no-group)))
+    :global-minor-mode t))
+
+(leaf ivy-rich
+  :doc "More friendly display transformer for ivy."
+  :req "emacs-24.5" "ivy-0.8.0"
+  :tag "ivy" "emacs>=24.5"
+  :emacs>= 24.5
+  :ensure t
+  :after ivy
+  :global-minor-mode t)
+
+(leaf prescient
+  :doc "Better sorting and filtering"
+  :req "emacs-25.1"
+  :tag "extensions" "emacs>=25.1"
+  :url "https://github.com/raxod502/prescient.el"
+  :emacs>= 25.1
+  :ensure t
+  :commands (prescient-persist-mode)
+  :custom `((prescient-aggressive-file-save . t)
+            (prescient-save-file . ,(locate-user-emacs-file "prescient")))
+  :global-minor-mode prescient-persist-mode)
+
+(leaf ivy-prescient
+  :doc "prescient.el + Ivy"
+  :req "emacs-25.1" "prescient-4.0" "ivy-0.11.0"
+  :tag "extensions" "emacs>=25.1"
+  :url "https://github.com/raxod502/prescient.el"
+  :emacs>= 25.1
+  :ensure t
+  :after prescient ivy
+  :custom ((ivy-prescient-retain-classic-highlighting . t))
+  :global-minor-mode t)
+;; }}}
+
 ;; Other packages {{{
 (leaf skk
   :ensure ddskk
