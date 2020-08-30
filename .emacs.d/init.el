@@ -27,6 +27,7 @@
   :doc "tools for customizing Emacs and Lisp packages"
   :tag "builtin" "faces" "help"
   :custom `((custom-file . ,(locate-user-emacs-file "custom.el"))))
+
 (leaf cus-start
   :doc "define customization properties of builtins"
   :tag "builtin" "internal"
@@ -37,10 +38,12 @@
 		(left . 0)
 		(width . 100)
 		(height . 55)))))
+
 (leaf files
   :doc "file input and output commands for Emacs"
   :tag "builtin"
   :custom (require-final-newline . nil))
+
 (leaf startup
   :doc "process Emacs shell arguments"
   :tag "builtin"
@@ -52,6 +55,7 @@
 
 ;; leaf-related packages {{{
 (leaf leaf-convert :ensure t)
+
 (leaf leaf-tree
   :ensure t
   :custom ((imenu-list-size . 30)
