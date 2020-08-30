@@ -146,6 +146,10 @@
   :ensure ddskk
   :require t skk-study skk-hint
   :bind (("C-x C-j" . skk-mode)))
+
+(leaf zenburn-theme
+  :ensure t
+  :config (load-theme 'zenburn t))
 ;; }}}
 
 (provide 'init)
