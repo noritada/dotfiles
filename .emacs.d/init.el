@@ -31,7 +31,23 @@
   :doc "define customization properties of builtins"
   :tag "builtin" "internal"
 
-  :bind (("C-x C-b" . ibuffer)))
+  :bind (("C-x C-b" . ibuffer))
+  :custom '((default-frame-alist .
+	      '((top . 0)
+		(left . 0)
+		(width . 100)
+		(height . 55)))))
+(leaf files
+  :doc "file input and output commands for Emacs"
+  :tag "builtin"
+  :custom (require-final-newline . nil))
+(leaf startup
+  :doc "process Emacs shell arguments"
+  :tag "builtin"
+  :custom
+  ;; workaround for an issue that "/" is used both as default-directory
+  ;; and as command-line-default-directory
+  (command-line-default-directory . "~/"))
 ;; }}}
 
 ;; leaf-related packages {{{
