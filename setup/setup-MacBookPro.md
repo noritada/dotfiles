@@ -76,6 +76,9 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
   * vbindiff
   * fortune
   * telnet
+  * go
+  * cvs
+  * cvsps@2 (brew tap Frizlab/Perso && brew install cvsps@2)
 
 ## from Homebrew Cask
 * adobe-acrobat-reader
