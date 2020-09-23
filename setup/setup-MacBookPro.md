@@ -92,6 +92,7 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 * zoomus
 * brave-browser
 * wireshark
+* deepl
 
 ## from npm
 
