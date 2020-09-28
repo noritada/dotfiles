@@ -3,6 +3,10 @@ source $HOME/.poetry/env
 export MANPATH=$MANPATH
 
 export RUBYOPT=rubygems
+
+export GOPATH="$HOME/go"
+export PATH=$PATH:"$GOPATH/bin"
+
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=50000
 SAVEHIST=10000
