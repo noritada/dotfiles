@@ -7,6 +7,8 @@ export RUBYOPT=rubygems
 export GOPATH="$HOME/go"
 export PATH=$PATH:"$GOPATH/bin"
 
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=50000
 SAVEHIST=10000
