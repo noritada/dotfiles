@@ -4,6 +4,9 @@ export MANPATH=$MANPATH
 
 export RUBYOPT=rubygems
 
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+
 export GOPATH="$HOME/go"
 export PATH=$PATH:"$GOPATH/bin"
 
