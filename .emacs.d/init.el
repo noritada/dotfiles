@@ -64,6 +64,7 @@
 
 ;; Major mode packages {{{
 (leaf adoc-mode :ensure t)
+(leaf dockerfile-mode :ensure t)
 (leaf graphql-mode :ensure t)
 (leaf po-mode :ensure t)
 (leaf review-mode :ensure t)
