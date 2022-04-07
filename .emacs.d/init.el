@@ -154,5 +154,11 @@
   :config (load-theme 'zenburn t))
 ;; }}}
 
+;; Other configurations {{{
+(unless (version< emacs-version "28.0")
+    ;; avoid the aenkaku space underline issue
+    (setq nobreak-char-display nil))
+;; }}}
+
 (provide 'init)
 ;; vim:foldmethod=marker:foldlevel=0
