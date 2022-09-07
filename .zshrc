@@ -25,6 +25,7 @@ setopt inc_append_history
 setopt prompt_subst
 PROMPT='%B%n[%T]%#%b '
 RPROMPT='%B%m:%~%b'
+unsetopt BEEP
 export PYTHONPATH=$HOME/lib/python2.6/site-packages:/usr/local/lib/python2.7/site-packages
 export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
 
