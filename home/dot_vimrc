@@ -55,4 +55,5 @@ syntax on
 " }}}
 
 set modelines=1
+" vim: set filetype=vim:
 " vim:foldmethod=marker:foldlevel=0
