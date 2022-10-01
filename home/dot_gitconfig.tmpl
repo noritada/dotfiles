@@ -1,0 +1,14 @@
+[user]
+	name = Noritada Kobayashi
+{{- if hasPrefix "1395-koba-n" .chezmoi.hostname }}
+	email = koba-n@wni.com
+{{- else }}
+	email = noritada.kobayashi@gmail.com
+{{- end }}
+[core]
+	excludesfile = {{ .chezmoi.homeDir }}/.gitignore
+	quotepath = false
+[http]
+	postBuffer = 1048576000
+[credential]
+	helper = osxkeychain
