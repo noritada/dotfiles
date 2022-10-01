@@ -1,0 +1,10 @@
+[user]
+	name = Noritada Kobayashi
+	email = koba-n@wni.com
+[core]
+	excludesfile = /Users/noritada/.gitignore
+	quotepath = false
+[http]
+	postBuffer = 1048576000
+[credential]
+	helper = osxkeychain
