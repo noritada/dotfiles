@@ -158,6 +158,7 @@
 (unless (version< emacs-version "28.0")
     ;; avoid the aenkaku space underline issue
     (setq nobreak-char-display nil))
+(desktop-save-mode 1)
 ;; }}}
 
 (provide 'init)
