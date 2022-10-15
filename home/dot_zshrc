@@ -29,6 +29,7 @@ unsetopt BEEP
 export PYTHONPATH=$HOME/lib/python2.6/site-packages:/usr/local/lib/python2.7/site-packages
 export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
 
+# Custom key bindings {{{
 # Backward killing for paths/URLs.
 tcsh-backward-delete-word () {
   local WORDCHARS="${WORDCHARS:s#/#}"
@@ -38,6 +39,11 @@ tcsh-backward-delete-word () {
 zle -N tcsh-backward-delete-word
 bindkey '^W' tcsh-backward-delete-word
 
+# }}}
+# Completions {{{
 fpath+=~/.zfunc
 autoload -U compinit
 compinit
+
+# }}}
+# vim: set filetype=zsh foldmethod=marker foldlevel=0 :
