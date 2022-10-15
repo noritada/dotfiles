@@ -23,12 +23,21 @@ setopt hist_ignore_space
 setopt hist_save_no_dups
 setopt inc_append_history
 setopt prompt_subst
-PROMPT='%B%n[%T]%#%b '
-RPROMPT='%B%m:%~%b'
 unsetopt BEEP
 export PYTHONPATH=$HOME/lib/python2.6/site-packages:/usr/local/lib/python2.7/site-packages
 export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
 
+# Prompt {{{
+# Concepts:
+# - Normal operation should not change the input start position.
+# - Special operations (e.g., changing users) should change the input start position.
+# - When recording the contents of the terminal display by copying and pasting, the recorded
+#   contents should not depend on the window size.
+PROMPT_LOCATION_INFO='%B%m:%~%b'
+PROMPT_MAIN='%B%n[%D{%H:%M}]%#%b '
+PROMPT=$'\n'"${PROMPT_LOCATION_INFO}"$'\n'"${PROMPT_MAIN}"
+
+# }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
 tcsh-backward-delete-word () {
