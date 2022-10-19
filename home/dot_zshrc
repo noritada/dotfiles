@@ -39,6 +39,8 @@ PROMPT=$'\n'"${PROMPT_LOCATION_INFO}"$'\n'"${PROMPT_MAIN}"
 
 # }}}
 # Fuzzy finder {{{
+export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border --margin=1 --padding=1"
+
 which ghq > /dev/null && FZF_REPO="$(ghq root)/github.com/junegunn/fzf"
 
 # Auto-completion
