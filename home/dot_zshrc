@@ -38,6 +38,18 @@ PROMPT_MAIN='%B%n[%D{%H:%M}]%#%b '
 PROMPT=$'\n'"${PROMPT_LOCATION_INFO}"$'\n'"${PROMPT_MAIN}"
 
 # }}}
+# Fuzzy finder {{{
+which ghq > /dev/null && FZF_REPO="$(ghq root)/github.com/junegunn/fzf"
+
+# Auto-completion
+# ---------------
+[[ -n "${FZF_REPO}" && $- == *i* ]] && source "${FZF_REPO}/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+[[ -n "${FZF_REPO}" ]] && source "${FZF_REPO}/shell/key-bindings.zsh"
+
+# }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
 tcsh-backward-delete-word () {
