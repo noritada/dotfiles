@@ -52,6 +52,18 @@ which ghq > /dev/null && FZF_REPO="$(ghq root)/github.com/junegunn/fzf"
 [[ -n "${FZF_REPO}" ]] && source "${FZF_REPO}/shell/key-bindings.zsh"
 
 # }}}
+# Custom functions {{{
+repo() {
+  REPO_NAME="$(ghq list | fzf)"
+  [[ -n "${REPO_NAME}" ]] && cd "$(ghq root)/${REPO_NAME}"
+}
+
+repoc() {
+  REPO_NAME="$(ghq list | fzf)"
+  [[ -n "${REPO_NAME}" ]] && code "$(ghq root)/${REPO_NAME}"
+}
+
+# }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
 tcsh-backward-delete-word () {
