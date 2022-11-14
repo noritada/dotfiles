@@ -143,6 +143,28 @@
   :global-minor-mode t)
 ;; }}}
 
+;; company-related packages {{{
+(leaf company
+  :doc "Modular text completion framework"
+  :req "emacs-25.1"
+  :emacs>= 25.1
+  :ensure t
+  :disabled t
+  :blackout t
+  :bind ((company-active-map
+          ("C-n" . company-select-next)
+          ("C-p" . company-select-previous))
+         (company-search-map
+          ("C-n" . company-select-next)
+          ("C-p" . company-select-previous))))
+
+(leaf company-dict
+  :doc "A backend that emulates ac-source-dictionary"
+  :req "emacs-24.4"
+  :emacs>= 24.4
+  :ensure t)
+;; }}}
+
 ;; Other packages {{{
 (leaf skk
   :ensure ddskk
