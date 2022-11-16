@@ -156,7 +156,10 @@
           ("C-p" . company-select-previous))
          (company-search-map
           ("C-n" . company-select-next)
-          ("C-p" . company-select-previous))))
+          ("C-p" . company-select-previous)))
+  :custom ((company-require-match . 'never)
+           (company-idle-delay . 0)
+           (company-selection-wrap-around . t)))
 
 (leaf company-dict
   :doc "A backend that emulates ac-source-dictionary"
