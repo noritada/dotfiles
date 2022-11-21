@@ -70,6 +70,10 @@
     {
       "name": "Vue Green",
       "value": "#42b883"
+    },
+    {
+      "name": "Atom Green",
+      "value": "#40a977"
     }
   ]
 }
