@@ -1,0 +1,14 @@
+{{ $extensions := list
+    "ms-python.python"
+    "ms-toolsai.jupyter"
+    "ms-toolsai.jupyter-keymap"
+    "ms-toolsai.jupyter-renderers"
+    "vscodevim.vim" -}}
+
+#!/bin/bash
+
+set -euxo pipefail
+
+{{ range $extensions -}}
+codium --install-extension {{ . }}
+{{ end -}}
