@@ -149,8 +149,8 @@
   :req "emacs-25.1"
   :emacs>= 25.1
   :ensure t
-  :disabled t
   :blackout t
+  :defvar company-backends
   :bind ((company-active-map
           ("C-n" . company-select-next)
           ("C-p" . company-select-previous))
@@ -159,13 +159,16 @@
           ("C-p" . company-select-previous)))
   :custom ((company-require-match . 'never)
            (company-idle-delay . 0)
-           (company-selection-wrap-around . t)))
+           (company-selection-wrap-around . t)
+           (company-backends '())))
 
 (leaf company-dict
   :doc "A backend that emulates ac-source-dictionary"
   :req "emacs-24.4"
   :emacs>= 24.4
-  :ensure t)
+  :ensure t
+  :after company
+  :config (add-to-list 'company-backends 'company-dict))
 ;; }}}
 
 ;; Other packages {{{
