@@ -159,7 +159,9 @@
           ("C-p" . company-select-previous)))
   :custom ((company-require-match . 'never)
            (company-idle-delay . 0)
+           (company-minimum-prefix-length . 2)
            (company-selection-wrap-around . t)
+           (company-tooltip-align-annotations . t)
            (company-backends '())))
 
 (leaf company-dict
