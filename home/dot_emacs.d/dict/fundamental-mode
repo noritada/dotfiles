@@ -1,19 +1,19 @@
-binary_data_format	[general]	バイナリデータ形式
-binning			[data_science]	ビニング
-DataFrame		[pandas]	データフレーム
-data_type		[pandas]	データ型
-database		[general]	データベース
-dataset			[general]	データセット
-dict_comprehension	[python]	ディクショナリ内包表記
-dummy_variable		[data_science]	ダミー変数
-extension_data_type	[pandas]	拡張データ型
-file_like_object	[python]	ファイル系オブジェクト
-hierarchical_indexing	[pandas]	階層型インデックス
-indicator_variable	[data_science]	標識変数
-mapping			[general]	マッピング
-missing_data		[data_science]	欠損値
-null_value		[general]	ヌル値
-outlier			[data_science]	外れ値
-sentinel_value		[pandas]	標識値
-Series			[pandas]	シリーズ
-tabular_data		[general]	テーブル形式のデータ
+binary_data_format	[general; バイナリデータ形式]
+binning			[data science; ビニング]
+DataFrame		[pandas; データフレーム]
+data_type		[pandas; データ型]
+database		[general; データベース]
+dataset			[general; データセット]
+dict_comprehension	[python; ディクショナリ内包表記]
+dummy_variable		[data science; ダミー変数]
+extension_data_type	[pandas; 拡張データ型]
+file_like_object	[python; ファイル系オブジェクト]
+hierarchical_indexing	[pandas; 階層型インデックス]
+indicator_variable	[data science; 標識変数]
+mapping			[general; マッピング]
+missing_data		[data_science; 欠損値]
+null_value		[general; ヌル値]
+outlier			[data science; 外れ値]
+sentinel_value		[pandas; 標識値]
+Series			[pandas; シリーズ]
+tabular_data		[general; テーブル形式のデータ]
