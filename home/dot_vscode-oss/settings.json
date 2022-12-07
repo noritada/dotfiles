@@ -1,3 +1,6 @@
 {
-    "workbench.colorTheme": "Zenburn (No Bold)"
+    "workbench.colorTheme": "Zenburn (No Bold)",
+    "files.exclude": {
+        "**/*~": true
+    }
 }
