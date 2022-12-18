@@ -10,10 +10,12 @@ build_mdbook() {
     mkdir -p "$name"
     (
         cd "$repo_path"
-        local readonly tag=$(git describe --tags --abbrev=0)
-        git archive --format=tar $tag
+        local readonly rev=$(git describe --tags --abbrev=0 || echo "HEAD")
+        git archive --format=tar $rev
     ) | tar -C "$name" -xf -
     (cd "$name/$subdir" && mdbook build)
 }
 
 build_mdbook mdBook ~/ghq/github.com/rust-lang/mdBook guide
+build_mdbook patterns ~/ghq/github.com/rust-unofficial/patterns .
+build_mdbook rustwasm-book ~/ghq/github.com/rustwasm/book .
