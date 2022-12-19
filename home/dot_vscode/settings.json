@@ -75,5 +75,8 @@
       "name": "Atom Green",
       "value": "#40a977"
     }
-  ]
+  ],
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
