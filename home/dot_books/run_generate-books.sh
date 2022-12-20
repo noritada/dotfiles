@@ -17,5 +17,7 @@ build_mdbook() {
 }
 
 build_mdbook mdBook ~/ghq/github.com/rust-lang/mdBook guide
+build_mdbook rust-cookbook ~/ghq/github.com/rust-lang-nursery/rust-cookbook .
 build_mdbook patterns ~/ghq/github.com/rust-unofficial/patterns .
 build_mdbook rustwasm-book ~/ghq/github.com/rustwasm/book .
+build_mdbook wasm-bindgen ~/ghq/github.com/rustwasm/wasm-bindgen guide
