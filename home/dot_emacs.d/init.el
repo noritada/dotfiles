@@ -189,6 +189,7 @@
     ;; avoid the aenkaku space underline issue
     (setq nobreak-char-display nil))
 (desktop-save-mode 1)
+(global-set-key (kbd "C-z") #'ignore)
 ;; }}}
 
 (provide 'init)
