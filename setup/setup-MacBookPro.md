@@ -4,14 +4,12 @@
 * LibreOffice Vanilla
 
 ## from Internet
-* Atom
 * Docker
 * Firefox
 * Google Chrome
 * Google Earth Pro
 * Google Japanese Input
 * Skype
-* Gapminder Offline
 * VSCode
 
 ## others
@@ -28,7 +26,6 @@
   * git
   * cmake
   * cairo
-  * neomutt
   * w3m
   * protobuf
   * wabt
@@ -41,9 +38,7 @@
   * gh
   * nodebrew
   * exiftool
-  * minio/stable/minio
   * parallel
-  * vbindiff
   * fortune
   * telnet
   * go
@@ -51,11 +46,7 @@
   * cvsps@2 (brew tap Frizlab/Perso && brew install cvsps@2)
 
 ## from Homebrew Cask
-* adobe-acrobat-reader
-* calibre
 * emacs
-* microsoft-remote-desktop-beta
-* postman
 * slack
 * vlc
 * drawio
@@ -66,31 +57,17 @@
 
 ## from npm
 
-* copy-webpack-plugin
 * npm
-* webpack
-* webpack-dev-server
 
 ## from pip3
 * awscli
 * requests
-* Sphinx
-* sphinx-intl
-* sphinx_rtd_theme
-* nbsphinx
 * ipython
 * black
-* pytest
-* pytest-html
-* recommonmark
 
 ## from cargo
-* wasm-pack
 * mdbook
-* wasm-bindgen-cli
-* monolith
 * procs
-* pyflow
 
 # Dock
 * 上記追加インストールアプリ
@@ -130,18 +107,6 @@
   * 「シェルの終了時」を「シェルが正常に終了した場合は閉じる」
 
 
-# Add-ons
-## Atom
-* atomic-emacs
-* goto-definition
-* minimap
-* project-manager
-* tablr
-* markdown-pdf
-
-
 # Misc
 * ユーザ辞書（ことえり）
 * ユーザ辞書（Google日本語入力）
-
-* pip3.6 install poyonga --user
