@@ -65,6 +65,14 @@ repoc() {
   [[ -n "${REPO_NAME}" ]] && code "$(ghq root)/${REPO_NAME}"
 }
 
+ru-json-diff() {
+  diff -u <(cutruhead "$1" | jq .) <(cutruhead "$2" | jq .)
+}
+
+ru-geojson-featurecollection-length() {
+  cutruhead "$1" | jq '.features | length'
+}
+
 # }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
