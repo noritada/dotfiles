@@ -81,5 +81,8 @@
   },
   "[python]": {
     "editor.formatOnType": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
