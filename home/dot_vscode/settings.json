@@ -84,5 +84,8 @@
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsEnvVars": {
+    "GO111MODULE": "on"
   }
 }
