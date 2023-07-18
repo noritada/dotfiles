@@ -12,7 +12,7 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # install Homebrew (see https://brew.sh/index_ja )
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install rustup (see https://rustup.rs/ )
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -20,5 +20,5 @@ rustup component add rustfmt
 rustup target add wasm32-unknown-unknown
 rustup target add x86_64-pc-windows-gnu
 
-# install Poetry
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+# install Poetry (see https://python-poetry.org/docs/ )
+curl -sSL https://install.python-poetry.org | python3 -
