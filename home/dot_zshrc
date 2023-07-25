@@ -73,6 +73,37 @@ ru-geojson-featurecollection-length() {
   cutruhead "$1" | jq '.features | length'
 }
 
+stock-get() {
+  (
+    set -e
+    if [ $# != 5 ]; then
+      return 1
+    fi
+
+    local bucket_name="$1"
+    local tagid="$2"
+    local date="$3"
+    local time_pat="$4"
+    local out_dir="$5"
+
+    if [ ${#tagid} != 9 ]; then
+      return 1
+    fi
+    if [ ${#date} != 8 ]; then
+      return 1
+    fi
+
+    local year="${date:0:4}"
+    local month="${date:4:2}"
+    local day="${date:6:2}"
+    local prefix="s3://${bucket_name}/${tagid}/${year}/${month}/${day}/"
+
+    echo "aws s3 ls ${prefix} | awk '{print \$4;}' | grep '${date}${time_pat}'" 1>&2
+    aws s3 ls "${prefix}" | awk '{print $4;}' | grep "${date}${time_pat}" | while IFS= read -r item; do
+      aws s3 cp "${prefix}${item}" "${out_dir}"
+    done
+  )
+}
 # }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
