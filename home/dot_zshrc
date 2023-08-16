@@ -55,12 +55,12 @@ which ghq > /dev/null && FZF_REPO="$(ghq root)/github.com/junegunn/fzf"
 
 # }}}
 # Custom functions {{{
-repo() {
+cd-repo() {
   REPO_NAME="$(ghq list | fzf)"
   [[ -n "${REPO_NAME}" ]] && cd "$(ghq root)/${REPO_NAME}"
 }
 
-repoc() {
+code-repo() {
   REPO_NAME="$(ghq list | fzf)"
   [[ -n "${REPO_NAME}" ]] && code "$(ghq root)/${REPO_NAME}"
 }
