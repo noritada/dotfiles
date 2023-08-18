@@ -104,6 +104,13 @@ stock-get() {
     done
   )
 }
+
+connect-intra() {
+  trap "networksetup -setsocksfirewallproxystate Wi-Fi off; exit" 1 2 3 15
+  networksetup -setsocksfirewallproxystate Wi-Fi on
+  ssh -N tunnel
+  networksetup -setsocksfirewallproxystate Wi-Fi off
+}
 # }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
