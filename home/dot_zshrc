@@ -1,10 +1,7 @@
-export PATH=$HOME/.cargo/bin:$HOME/.nodebrew/current/bin:$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:$HOME/.local/bin:$HOME/bin:/usr/texbin:/usr/local/opt/gettext/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/.nodebrew/current/bin:$HOME/.local/bin:$HOME/bin:$PATH
 export MANPATH=$MANPATH
 
 export RUBYOPT=rubygems
-
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 
 export GOPATH="$HOME/go"
 export PATH=$PATH:"$GOPATH/bin"
@@ -26,8 +23,6 @@ setopt hist_save_no_dups
 setopt inc_append_history
 setopt prompt_subst
 unsetopt BEEP
-export PYTHONPATH=$HOME/lib/python2.6/site-packages:/usr/local/lib/python2.7/site-packages
-export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
 
 # Prompt {{{
 # Concepts:
