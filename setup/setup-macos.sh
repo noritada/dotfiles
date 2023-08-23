@@ -21,7 +21,7 @@ fi
 
 # install rustup (see https://rustup.rs/ )
 if !(type "rustup" > /dev/null 2>&1); then
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-modify-path -y
     rustup component add rustfmt
     rustup target add wasm32-unknown-unknown
     rustup target add x86_64-pc-windows-gnu
