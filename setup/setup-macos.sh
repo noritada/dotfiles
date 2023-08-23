@@ -29,3 +29,6 @@ fi
 
 # install Poetry (see https://python-poetry.org/docs/ )
 curl -sSL https://install.python-poetry.org | python3 -
+
+# install Homebrew packages
+brew install --cask slack zoom
