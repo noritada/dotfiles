@@ -27,8 +27,20 @@ if !(type "rustup" > /dev/null 2>&1); then
     rustup target add x86_64-pc-windows-gnu
 fi
 
+# install Go (see https://go.dev/doc/install )
+if !(type "go" > /dev/null 2>&1); then
+    curl -sSL -O https://go.dev/dl/go1.21.0.darwin-arm64.pkg
+    sudo installer -pkg go1.21.0.darwin-arm64.pkg -target /
+fi
+
 # install Poetry (see https://python-poetry.org/docs/ )
 curl -sSL https://install.python-poetry.org | python3 -
+
+# install Rye (see https://rye-up.com/guide/installation/ )
+if !(type "rye" > /dev/null 2>&1); then
+    curl -sSf https://rye-up.com/get | RYE_INSTALL_OPTION="--yes" bash
+    source "$HOME/.rye/env"
+fi
 
 # install Homebrew packages
 brew install --cask slack zoom
