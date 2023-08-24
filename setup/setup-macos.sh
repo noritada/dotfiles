@@ -43,4 +43,4 @@ if !(type "rye" > /dev/null 2>&1); then
 fi
 
 # install Homebrew packages
-brew install --cask slack zoom
+brew install --cask brave-browser deepl drawio emacs slack visual-studio-code vlc vscodium wireshark zoom
