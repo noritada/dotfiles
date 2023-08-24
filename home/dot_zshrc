@@ -1,4 +1,4 @@
-export PATH=$HOME/.cargo/bin:$HOME/.nodebrew/current/bin:$HOME/.local/bin:$HOME/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$HOME/bin:$PATH
 
 export RUBYOPT=rubygems
 
