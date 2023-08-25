@@ -45,16 +45,6 @@
   * cvs
   * cvsps@2 (brew tap Frizlab/Perso && brew install cvsps@2)
 
-## from Homebrew Cask
-* emacs
-* slack
-* vlc
-* drawio
-* zoomus
-* brave-browser
-* wireshark
-* deepl
-
 ## from npm
 
 * npm
