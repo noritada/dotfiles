@@ -5,6 +5,7 @@ export RUBYOPT=rubygems
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
+# Zsh options {{{
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=50000
 SAVEHIST=10000
@@ -18,6 +19,7 @@ setopt inc_append_history
 setopt prompt_subst
 unsetopt BEEP
 
+# }}}
 # Prompt {{{
 # Concepts:
 # - Normal operation should not change the input start position.
