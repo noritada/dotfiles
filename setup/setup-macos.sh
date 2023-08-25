@@ -43,4 +43,5 @@ if !(type "rye" > /dev/null 2>&1); then
 fi
 
 # install Homebrew packages
+brew install cmake jq nkf pandoc wget
 brew install --cask brave-browser deepl drawio emacs slack visual-studio-code vlc vscodium wireshark zoom
