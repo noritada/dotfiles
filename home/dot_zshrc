@@ -2,8 +2,6 @@ export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$HOME/bin:$PATH
 
 export RUBYOPT=rubygems
 
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
 

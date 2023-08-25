@@ -1,2 +1,3 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 source "$HOME/.rye/env"
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
