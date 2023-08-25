@@ -45,3 +45,8 @@ fi
 # install Homebrew packages
 brew install cmake jq nkf pandoc wget
 brew install --cask brave-browser deepl drawio emacs slack visual-studio-code vlc vscodium wireshark zoom
+
+# install tools using toolchains of Rust and Go
+cargo install --locked bat trunk
+cargo install git-delta mdbook
+go install github.com/x-motemen/ghq@latest
