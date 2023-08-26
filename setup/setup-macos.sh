@@ -43,10 +43,16 @@ if !(type "rye" > /dev/null 2>&1); then
 fi
 
 # install Homebrew packages
-brew install cmake jq nkf pandoc wget
+brew install cmake jq nkf pandoc protobuf wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zoom
 
 # install tools using toolchains of Rust and Go
 cargo install --locked bat trunk
 cargo install git-delta mdbook
 go install github.com/x-motemen/ghq@latest
+
+# install other tools
+bin_dir="${HOME}/.local/bin"
+mkdir -p "${bin_dir}"
+curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "${bin_dir}/yt-dlp"
+chmod a+rx "${bin_dir}/yt-dlp"
