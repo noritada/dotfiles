@@ -49,7 +49,7 @@ brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-
 # install tools using toolchains of Rust and Go
 cargo install --locked bat trunk
 cargo install git-delta mdbook
-go install github.com/x-motemen/ghq@latest
+go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 
 # install other tools
 bin_dir="${HOME}/.local/bin"
