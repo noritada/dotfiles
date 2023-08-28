@@ -56,6 +56,26 @@ code-repo() {
   [[ -n "${REPO_NAME}" ]] && code "$(ghq root)/${REPO_NAME}"
 }
 
+check-mbtiles() {
+  (
+    set -e
+    if [ $# != 4 ]; then
+      return 1
+    fi
+
+    local mbtiles_fname="$1"
+    local z="$2"
+    local x="$3"
+    local y="$4"
+    local y_eff=$(echo "2^${z}-${y}" | bc)
+
+    sqlite3 "${mbtiles_fname}" \
+      "select quote(tile_data) from tiles where zoom_level=${z} and tile_column=${x} and tile_row=${y_eff};" \
+      | cut -d\' -f2 | xxd -r -p | zcat \
+      | protoc --decode=vector_tile.Tile -I ~/ghq/github.com/mapbox/vector-tile-spec/2.1 vector_tile.proto
+  )
+}
+
 ru-json-diff() {
   diff -u <(cutruhead "$1" | jq .) <(cutruhead "$2" | jq .)
 }
