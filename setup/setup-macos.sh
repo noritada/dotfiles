@@ -43,7 +43,7 @@ if !(type "rye" > /dev/null 2>&1); then
 fi
 
 # install Homebrew packages
-brew install cmake jq nkf pandoc protobuf wget
+brew install cmake eccodes jq nkf pandoc protobuf wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zoom
 
 # install tools using toolchains of Rust and Go
