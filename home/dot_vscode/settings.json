@@ -6,6 +6,8 @@
   "python.linting.flake8Enabled": true,
   "python.formatting.provider": "black",
   "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
     "**/*~": true
   },
   "workbench.editorAssociations": {
