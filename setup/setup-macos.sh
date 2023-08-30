@@ -44,7 +44,7 @@ fi
 
 # install Homebrew packages
 brew install cmake eccodes jq nkf pandoc protobuf wget
-brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zoom
+brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zed zoom
 
 # install tools using toolchains of Rust and Go
 cargo install --locked bat trunk
