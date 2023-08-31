@@ -42,6 +42,9 @@ if !(type "rye" > /dev/null 2>&1); then
     source "$HOME/.rye/env"
 fi
 
+# install nodebrew
+curl -L git.io/nodebrew | perl - setup
+
 # install Homebrew packages
 brew install cmake eccodes jq nkf pandoc protobuf wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zed zoom
