@@ -46,7 +46,7 @@ fi
 curl -L git.io/nodebrew | perl - setup
 
 # install Homebrew packages
-brew install cmake eccodes jq nkf pandoc podman protobuf wget
+brew install cmake eccodes git-gui jq nkf pandoc podman protobuf wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zed zoom
 
 # install tools using toolchains of Rust and Go
@@ -59,3 +59,11 @@ bin_dir="${HOME}/.local/bin"
 mkdir -p "${bin_dir}"
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "${bin_dir}/yt-dlp"
 chmod a+rx "${bin_dir}/yt-dlp"
+
+# install git-filter-repo
+(
+    version="2.38.0"
+    cd "${HOME}/.local/bin"
+    curl -sS -O "https://raw.githubusercontent.com/newren/git-filter-repo/v${version}/git-filter-repo"
+    chmod a+rx git-filter-repo
+)
