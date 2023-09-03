@@ -57,6 +57,19 @@ go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 # install other tools
 bin_dir="${HOME}/.local/bin"
 mkdir -p "${bin_dir}"
+
+(
+    # ensure fzf installed in ${HOME}/.local/bin
+    version="0.42.0"
+    fzf_base="${HOME}/.local"
+    fzf_install="${fzf_base}/fzf-install"
+    mkdir -p "${fzf_base}"
+    curl -sS "https://raw.githubusercontent.com/junegunn/fzf/${version}/install" -o "${fzf_install}"
+    chmod a+rx "${fzf_install}"
+    "${fzf_install}" --no-key-bindings --no-completion --no-update-rc
+    rm "${fzf_install}"
+)
+
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "${bin_dir}/yt-dlp"
 chmod a+rx "${bin_dir}/yt-dlp"
 
