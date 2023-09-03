@@ -81,5 +81,8 @@ chmod a+rx "${bin_dir}/yt-dlp"
     chmod a+rx git-filter-repo
 )
 
+cargo install --git https://github.com/noritada/grib-rs.git grib-cli
+cargo install --git https://github.com/noritada/rrr-rs.git rrr-cli
+
 # install chezmoi (in ./.local/bin) and dotfiles
 sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply "noritada"
