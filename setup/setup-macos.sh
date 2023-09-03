@@ -80,3 +80,6 @@ chmod a+rx "${bin_dir}/yt-dlp"
     curl -sS -O "https://raw.githubusercontent.com/newren/git-filter-repo/v${version}/git-filter-repo"
     chmod a+rx git-filter-repo
 )
+
+# install chezmoi (in ./.local/bin) and dotfiles
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply "noritada"
