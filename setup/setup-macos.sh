@@ -46,7 +46,7 @@ fi
 curl -L git.io/nodebrew | perl - setup
 
 # install Homebrew packages
-brew install cmake eccodes git-gui jq nkf pandoc podman protobuf wget
+brew install cmake eccodes git-gui jq nkf pandoc podman protobuf tmux wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zed zoom
 
 # install tools using toolchains of Rust and Go
