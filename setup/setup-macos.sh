@@ -14,6 +14,36 @@ defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 # disable auto spelling correction
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
+# remap keys on MacBook's built-in keyboard
+# Caps Lock -> Control
+keyboard_id="$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | paste -s -d'-\n' -)-0"
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id} -array-add '
+<dict>
+  <key>HIDKeyboardModifierMappingDst</key>
+  <integer>30064771300</integer>
+  <key>HIDKeyboardModifierMappingSrc</key>
+  <integer>30064771129</integer>
+</dict>
+'
+
+# Control -> Caps Lock
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id} -array-add '
+<dict>
+  <key>HIDKeyboardModifierMappingDst</key>
+  <integer>30064771129</integer>
+  <key>HIDKeyboardModifierMappingSrc</key>
+  <integer>30064771296</integer>
+</dict>
+'
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id} -array-add '
+<dict>
+  <key>HIDKeyboardModifierMappingDst</key>
+  <integer>30064771129</integer>
+  <key>HIDKeyboardModifierMappingSrc</key>
+  <integer>30064771300</integer>
+</dict>
+'
+
 # install Homebrew (see https://brew.sh/index_ja )
 if !(type "brew" > /dev/null 2>&1); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
