@@ -55,6 +55,18 @@ remap-keys "$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID"
 #   Vendor ID: 	0x058f  (Alcor Micro, Corp.)
 remap-keys "1423-37904-0"
 
+# show status and path bars in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowPathbar -bool true
+
+# use column view in Finder
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
+# disable two-finger swipe back/forward navigation
+defaults write com.brave.Browser AppleEnableSwipeNavigateWithScrolls -bool FALSE
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
+defaults write org.mozilla.firefox AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
 # install Homebrew (see https://brew.sh/index_ja )
 if !(type "brew" > /dev/null 2>&1); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
