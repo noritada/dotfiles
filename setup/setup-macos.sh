@@ -48,6 +48,10 @@ remap-keys() {
 
 # MacBook's built-in keyboard
 remap-keys "$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | paste -s -d'-\n' -)-0"
+# KB800HM Kinesis Freestyle2 for Mac:
+#   Product ID:	0x9410
+#   Vendor ID: 	0x058f  (Alcor Micro, Corp.)
+remap-keys "1423-37904-0"
 
 # install Homebrew (see https://brew.sh/index_ja )
 if !(type "brew" > /dev/null 2>&1); then
