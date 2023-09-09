@@ -17,6 +17,8 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 remap-keys() {
   local keyboard_id="$1"
 
+  defaults -currentHost delete -g com.apple.keyboard.modifiermapping.${keyboard_id}
+
   # Caps Lock -> Control
   defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id} -array-add '
   <dict>
