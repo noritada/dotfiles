@@ -86,8 +86,9 @@ if !(type "go" > /dev/null 2>&1); then
     sudo installer -pkg go1.21.0.darwin-arm64.pkg -target /
 fi
 
-# install Poetry (see https://python-poetry.org/docs/ )
-curl -sSL https://install.python-poetry.org | python3 -
+# install Poetry (see https://python-poetry.org/docs/ and
+# https://github.com/python-poetry/install.python-poetry.org/issues/24 )
+curl -sSL https://install.python-poetry.org | sed 's/symlinks=False/symlinks=True/' | python3 -
 
 # install Rye (see https://rye-up.com/guide/installation/ )
 if !(type "rye" > /dev/null 2>&1); then
