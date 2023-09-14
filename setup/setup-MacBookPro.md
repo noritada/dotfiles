@@ -12,10 +12,6 @@
 * Skype
 * VSCode
 
-## others
-* Command Line Tools for Xcode
-  * Terminalにてgccコマンドを叩いてトリガー
-
 ## from Homebrew
   * wget
   * python3
@@ -45,19 +41,11 @@
   * cvs
   * cvsps@2 (brew tap Frizlab/Perso && brew install cvsps@2)
 
-## from npm
-
-* npm
-
 ## from pip3
 * awscli
 * requests
 * ipython
 * black
-
-## from cargo
-* mdbook
-* procs
 
 # Dock
 * 上記追加インストールアプリ
