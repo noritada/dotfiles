@@ -5,39 +5,24 @@
 
 ## from Internet
 * Docker
-* Firefox
 * Google Chrome
 * Google Earth Pro
 * Google Japanese Input
-* Skype
-* VSCode
 
 ## from Homebrew
-  * wget
   * python3
     * pip3, pip3.6も一緒にインストールされる
-  * jq
-  * nkf
   * neovim
   * git
-  * cmake
   * cairo
   * w3m
-  * protobuf
   * wabt
   * ansible
-  * ffmpeg
   * poppler
-  * pandoc
   * aspell
-  * git-gui
-  * gh
-  * nodebrew
-  * exiftool
   * parallel
   * fortune
   * telnet
-  * go
   * cvs
   * cvsps@2 (brew tap Frizlab/Perso && brew install cvsps@2)
 
