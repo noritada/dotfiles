@@ -98,7 +98,7 @@ fi
 curl -L git.io/nodebrew | perl - setup
 
 # install Homebrew packages
-brew install cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman procs protobuf tmux wget
+brew install cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman procs protobuf shellcheck tmux wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zed zoom
 
 # install tools using toolchains of Rust and Go
