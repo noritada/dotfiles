@@ -111,12 +111,8 @@ bin_dir="${HOME}/.local/bin"
 mkdir -p "${bin_dir}"
 
 fzf_dir="${HOME}/.fzf"
-if [ ! -d "${fzf_dir}" ]; then
-  git clone --depth 1 https://github.com/junegunn/fzf.git "${fzf_dir}"
-  "${fzf_dir}/install"
-else
-  (cd "${fzf_dir}" && git pull && ./install)
-fi
+[ ! -d "${fzf_dir}" ] && git clone --depth 1 https://github.com/junegunn/fzf.git "${fzf_dir}"
+(cd "${fzf_dir}" && git pull && ./install --xdg --no-key-bindings --no-completion --no-update-rc)
 
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "${bin_dir}/yt-dlp"
 chmod a+rx "${bin_dir}/yt-dlp"

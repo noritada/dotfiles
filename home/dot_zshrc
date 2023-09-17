@@ -32,15 +32,7 @@ PROMPT=$'\n'"${PROMPT_LOCATION_INFO}"$'\n'"${PROMPT_MAIN}"
 # Fuzzy finder {{{
 export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border --margin=1 --padding=1"
 
-which ghq > /dev/null && FZF_REPO="$(ghq root)/github.com/junegunn/fzf"
-
-# Auto-completion
-# ---------------
-[[ -n "${FZF_REPO}" && $- == *i* ]] && source "${FZF_REPO}/shell/completion.zsh" 2> /dev/null
-
-# Key bindings
-# ------------
-[[ -n "${FZF_REPO}" ]] && source "${FZF_REPO}/shell/key-bindings.zsh"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 
 # }}}
 # Custom functions {{{
