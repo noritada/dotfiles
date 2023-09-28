@@ -98,7 +98,7 @@ fi
 curl -L git.io/nodebrew | perl - setup
 
 # install Homebrew packages
-brew install cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman procs protobuf shellcheck tmux wget
+brew install awscli cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman procs protobuf shellcheck tmux wget
 brew install --cask brave-browser deepl drawio emacs firefox skype slack visual-studio-code vlc vscodium wireshark zed zoom
 
 # install tools using toolchains of Rust and Go
@@ -109,6 +109,10 @@ go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 # install other tools
 bin_dir="${HOME}/.local/bin"
 mkdir -p "${bin_dir}"
+
+## Currently Rosetta is required
+# curl -sS "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+# sudo installer -pkg AWSCLIV2.pkg -target /
 
 fzf_dir="${HOME}/.fzf"
 [ ! -d "${fzf_dir}" ] && git clone --depth 1 https://github.com/junegunn/fzf.git "${fzf_dir}"
