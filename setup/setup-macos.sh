@@ -107,6 +107,8 @@ cargo install --locked bat trunk
 cargo install git-delta mdbook
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 
+npm install -g serverless
+
 # install other tools
 bin_dir="${HOME}/.local/bin"
 mkdir -p "${bin_dir}"
