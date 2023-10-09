@@ -3,6 +3,9 @@ export RUBYOPT=rubygems
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Zsh options {{{
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=50000
