@@ -98,6 +98,9 @@ fi
 # install nodebrew
 curl -L git.io/nodebrew | perl - setup
 
+# install Deno
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
 # install Homebrew packages
 brew install awscli cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman procs protobuf shellcheck tmux wget
 brew install --cask brave-browser deepl drawio emacs firefox skype signal slack visual-studio-code vlc vscodium wireshark zed zoom
