@@ -102,12 +102,12 @@ curl -L git.io/nodebrew | perl - setup
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
 # install Homebrew packages
-brew install awscli cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman procs protobuf shellcheck tmux wget
+brew install awscli cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman protobuf shellcheck tmux wget
 brew install --cask brave-browser deepl drawio emacs firefox skype signal slack visual-studio-code vlc vscodium wireshark zed zoom
 
 # install tools using toolchains of Rust and Go
 cargo install --locked bat trunk
-cargo install git-delta mdbook
+cargo install git-delta mdbook procs
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 
 npm install -g serverless
