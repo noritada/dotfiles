@@ -135,6 +135,10 @@ chmod a+rx "${bin_dir}/yt-dlp"
     chmod a+rx git-filter-repo
 )
 
+zola_dir="${HOME}/ghq/github.com/getzola/zola"
+[ ! -d "${zola_dir}" ] && git clone --depth 1 https://github.com/getzola/zola.git "${zola_dir}"
+(cd "${zola_dir}" && git pull && cargo install --path . --locked)
+
 cargo install --git https://github.com/noritada/grib-rs.git grib-cli
 cargo install --git https://github.com/noritada/rrr-rs.git rrr-cli
 
