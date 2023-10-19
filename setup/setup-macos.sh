@@ -110,7 +110,7 @@ cargo install --locked bat trunk
 cargo install git-delta mdbook procs
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 
-npm install -g serverless
+npm install -g serverless yarn
 
 # install other tools
 bin_dir="${HOME}/.local/bin"
