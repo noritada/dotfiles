@@ -102,8 +102,9 @@ curl -L git.io/nodebrew | perl - setup
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
 # install Homebrew packages
-brew install awscli cmake coreutils eccodes exiftool ffmpeg gh git-gui hdf5 jq nkf pandoc podman protobuf shellcheck tmux wget
-brew install --cask brave-browser deepl drawio emacs firefox skype signal slack visual-studio-code vlc vscodium wireshark zed zoom
+BASE_DIR=$(cd $(dirname $0); pwd)
+BREWFILE_PATH="${BASE_DIR}/Brewfile"
+brew bundle --file "${BREWFILE_PATH}"
 
 # install tools using toolchains of Rust and Go
 cargo install --locked bat trunk
