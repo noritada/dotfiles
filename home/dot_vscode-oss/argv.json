@@ -14,6 +14,9 @@
 	// Should restart the app if the value is changed.
 	"enable-crash-reporter": false,
 
+	// Display Language
+	"locale": "en",
+
 	// Unique id used for correlating crash reports sent from this instance.
 	// Do not edit this value.
 	"crash-reporter-id": "ae27376e-444b-4392-82f3-1c48b48f01fc"
