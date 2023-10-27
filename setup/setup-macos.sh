@@ -65,6 +65,9 @@ defaults write com.brave.Browser AppleEnableSwipeNavigateWithScrolls -bool FALSE
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 defaults write org.mozilla.firefox AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
+# disable IPv6
+networksetup -setv6off "Wi-Fi"
+
 # install Homebrew (see https://brew.sh/index_ja )
 if !(type "brew" > /dev/null 2>&1); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
