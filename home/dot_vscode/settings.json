@@ -3,8 +3,6 @@
   "terminal.integrated.shell.osx": "/bin/zsh",
   "workbench.colorTheme": "Zenburn (No Bold)",
   "editor.formatOnSave": true,
-  "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "black",
   "files.exclude": {
     "**/__pycache__": true,
     "**/.mypy_cache": true,
