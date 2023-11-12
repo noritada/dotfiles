@@ -81,6 +81,7 @@ rustup component add rustfmt
 rustup target add wasm32-unknown-unknown
 rustup target add x86_64-pc-windows-gnu
 rustup toolchain install nightly
+rustup target add --toolchain nightly wasm32-unknown-unknown
 
 # install Go (see https://go.dev/doc/install )
 if !(type "go" > /dev/null 2>&1); then
