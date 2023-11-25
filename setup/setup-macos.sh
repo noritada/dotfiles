@@ -112,7 +112,7 @@ brew bundle --file "${BREWFILE_PATH}"
 
 # install tools using toolchains of Rust and Go
 cargo install --locked bat trunk
-cargo install git-delta mdbook procs
+cargo install cargo-expand git-delta mdbook procs
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 
 npm install -g serverless yarn
