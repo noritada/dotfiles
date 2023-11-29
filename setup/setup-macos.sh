@@ -67,6 +67,7 @@ defaults write org.mozilla.firefox AppleEnableSwipeNavigateWithScrolls -bool FAL
 
 # disable IPv6
 networksetup -setv6off "Wi-Fi"
+networksetup -setsocksfirewallproxy "Wi-Fi" localhost 18080
 
 # install Homebrew (see https://brew.sh/index_ja )
 if !(type "brew" > /dev/null 2>&1); then
