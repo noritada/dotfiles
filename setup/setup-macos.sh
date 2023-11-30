@@ -115,6 +115,7 @@ brew bundle --file "${BREWFILE_PATH}"
 cargo install --locked bat trunk
 cargo install cargo-expand git-delta mdbook procs
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
+CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
 
 npm install -g serverless yarn
 
