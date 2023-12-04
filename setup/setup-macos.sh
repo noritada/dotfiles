@@ -81,6 +81,7 @@ fi
 rustup component add rustfmt
 rustup target add wasm32-unknown-unknown
 rustup target add x86_64-pc-windows-gnu
+rustup target add armv7-unknown-linux-gnueabihf armv7-unknown-linux-musleabihf
 rustup toolchain install nightly
 rustup target add --toolchain nightly wasm32-unknown-unknown
 
