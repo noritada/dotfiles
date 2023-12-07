@@ -118,7 +118,7 @@ cargo install cargo-expand git-delta mdbook procs
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
 
-npm install -g serverless yarn
+npm install -g create-react-app serverless yarn
 
 # install other tools
 bin_dir="${HOME}/.local/bin"
