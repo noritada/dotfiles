@@ -118,6 +118,9 @@ cargo install cargo-expand git-delta mdbook procs
 go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest
 CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
 
+npm install -g serverless2@npm:serverless@2
+ln -s "../lib/node_modules/serverless2/bin/serverless.js" "${HOME}/.nodebrew/current/bin/sls2"
+
 npm install -g create-react-app serverless yarn
 
 # install other tools
