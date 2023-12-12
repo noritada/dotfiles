@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 brew "arm-linux-gnueabihf-binutils"
+brew "aws-sam-cli"
 brew "awscli"
 brew "cmake"
 brew "coreutils"
