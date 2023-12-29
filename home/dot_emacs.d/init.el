@@ -66,7 +66,7 @@
 (leaf adoc-mode :ensure t)
 (leaf dockerfile-mode :ensure t)
 (leaf graphql-mode :ensure t)
-(leaf po-mode :ensure t)
+(leaf po-mode :ensure t :pin "20231006.1425")
 (leaf review-mode :ensure t)
 (leaf rust-mode :ensure t)
 ;; }}}
