@@ -71,6 +71,24 @@
 (leaf rust-mode :ensure t)
 ;; }}}
 
+;; recentf-related packages {{{
+(leaf recentf
+  :defun
+  (recentf-save-list recentf-cleanup)
+  :preface
+  (defun my-recentf-track-visited-file (_prev _curr)
+    (and buffer-file-name
+         (recentf-add-file buffer-file-name)))
+  :init
+  (leaf recentf-ext :ensure t)
+  :custom
+  `((recentf-save-file       . ,(expand-file-name "~/.emacs.d/recentf"))
+    (recentf-max-saved-items . 500)
+    (recentf-auto-cleanup    . 'mode)
+    )
+  )
+;; }}}
+
 ;; ivy-related packages {{{
 (leaf ivy
   :doc "Incremental Vertical completYon"
