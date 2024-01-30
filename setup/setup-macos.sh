@@ -69,6 +69,9 @@ defaults write org.mozilla.firefox AppleEnableSwipeNavigateWithScrolls -bool FAL
 networksetup -setv6off "Wi-Fi"
 networksetup -setsocksfirewallproxy "Wi-Fi" localhost 18080
 
+# disable the DeepL keyboard shortcut
+defaults write ~/Library/Group\ Containers/group.com.linguee.DeepL/Library/Preferences/group.com.linguee.DeepL.plist shortcutDisabled -bool TRUE
+
 # install Homebrew (see https://brew.sh/index_ja )
 if !(type "brew" > /dev/null 2>&1); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
