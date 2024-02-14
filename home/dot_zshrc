@@ -42,6 +42,39 @@ export RUNEWIDTH_EASTASIAN=0
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 
 # }}}
+# Colors for jq {{{
+# See https://jqlang.github.io/jq/manual/#colors.
+#
+# color for null
+# color for false
+# color for true
+# color for numbers
+# color for strings
+# color for arrays
+# color for objects
+# color for object keys
+#
+# 0	Reset all attributes
+# 1	Bright
+# 2	Dim
+# 4	Underscore
+# 5	Blink
+# 7	Reverse
+# 8	Hidden
+#
+# 	Foreground Colours
+# 30	Black
+# 31	Red
+# 32	Green
+# 33	Yellow
+# 34	Blue
+# 35	Magenta
+# 36	Cyan
+# 37	White
+
+export JQ_COLORS='0;90:0;36:0;36:0;39:0;32:1;39:1;39:0;33'
+
+# }}}
 # Custom functions {{{
 cd-repo() {
   REPO_NAME="$(ghq list | fzf)"
