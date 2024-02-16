@@ -30,9 +30,7 @@ unsetopt BEEP
 # - Special operations (e.g., changing users) should change the input start position.
 # - When recording the contents of the terminal display by copying and pasting, the recorded
 #   contents should not depend on the window size.
-PROMPT_LOCATION_INFO='%B%m:%~%b'
-PROMPT_MAIN='%B%n[%D{%H:%M}]%#%b '
-PROMPT=$'\n'"${PROMPT_LOCATION_INFO}"$'\n'"${PROMPT_MAIN}"
+eval "$(starship init zsh)"
 
 # }}}
 # Fuzzy finder {{{
