@@ -135,7 +135,7 @@ mkdir -p "${bin_dir}"
 # sudo installer -pkg AWSCLIV2.pkg -target /
 
 # install Starship
-curl -sS https://starship.rs/install.sh | sh
+sh -c "$(curl -sS https://starship.rs/install.sh)" -- --bin-dir "${bin_dir}"
 
 fzf_dir="${HOME}/.fzf"
 [ ! -d "${fzf_dir}" ] && git clone --depth 1 https://github.com/junegunn/fzf.git "${fzf_dir}"
