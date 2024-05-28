@@ -93,5 +93,6 @@
     "GO111MODULE": "on"
   },
   "explorer.sortOrder": "mixed",
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "liveServer.settings.donotShowInfoMsg": true
 }
