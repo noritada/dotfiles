@@ -69,6 +69,9 @@ defaults write org.mozilla.firefox AppleEnableSwipeNavigateWithScrolls -bool FAL
 networksetup -setv6off "Wi-Fi"
 networksetup -setsocksfirewallproxy "Wi-Fi" localhost 18080
 
+# use English in Chrome menu items
+defaults write com.google.Chrome AppleLanguages '(en-US)'
+
 # disable the DeepL keyboard shortcut
 defaults write ~/Library/Group\ Containers/group.com.linguee.DeepL/Library/Preferences/group.com.linguee.DeepL.plist shortcutDisabled -bool TRUE
 
