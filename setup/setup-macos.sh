@@ -107,6 +107,11 @@ if !(type "rye" > /dev/null 2>&1); then
     source "$HOME/.rye/env"
 fi
 
+# install uv (see https://docs.astral.sh/uv/getting-started/installation/#installation-methods )
+if !(type "uv" > /dev/null 2>&1); then
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+fi
+
 # install nodebrew
 curl -L git.io/nodebrew | perl - setup
 
