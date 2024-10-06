@@ -3,3 +3,6 @@ browser = "/Applications/Firefox.app/Contents/MacOS/firefox"
 
 [registries.crates-io]
 protocol = "sparse"
+
+[expand]
+theme = "TwoDark"
