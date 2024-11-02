@@ -112,7 +112,7 @@ if !(type "uv" > /dev/null 2>&1); then
     curl -LsSf https://astral.sh/uv/install.sh | sh
 fi
 
-# install ruff
+~/.cargo/bin/uv tool install hatch
 ~/.cargo/bin/uv tool install ruff
 
 # install nodebrew
