@@ -73,6 +73,9 @@ export RUNEWIDTH_EASTASIAN=0
 export JQ_COLORS='0;90:0;36:0;36:0;39:0;32:1;39:1;39:0;33'
 
 # }}}
+# Aliases {{{
+alias beep='afplay /System/Library/Sounds/Glass.aiff'
+# }}}
 # Custom functions {{{
 cd-repo() {
   REPO_NAME="$(ghq list | fzf)"
