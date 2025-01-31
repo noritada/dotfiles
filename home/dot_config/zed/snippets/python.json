@@ -1,0 +1,13 @@
+{
+  "if main": {
+    "prefix": [
+      "if__",
+      "ifmain"
+    ],
+    "body": [
+      "if __name__ == \"__main__\":",
+      "    ${1:pass}"
+    ],
+    "description": "Check if the code is in the top-level environment of the program"
+  }
+}
