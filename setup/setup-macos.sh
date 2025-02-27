@@ -129,7 +129,7 @@ brew bundle --file "${BREWFILE_PATH}"
 # install tools using toolchains of Rust and Go
 cargo install --locked bat maturin trunk
 cargo install cargo-expand git-delta mdbook procs wasm-bindgen-cli wasm-pack
-go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest github.com/tomwright/dasel/v2/cmd/dasel@master github.com/google/yamlfmt/cmd/yamlfmt@latest
+go install github.com/knqyf263/utern@latest github.com/x-motemen/ghq@latest github.com/tomwright/dasel/v2/cmd/dasel@master github.com/google/yamlfmt/cmd/yamlfmt@latest mvdan.cc/sh/v3/cmd/shfmt@latest
 CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
 
 npm install -g serverless2@npm:serverless@2
