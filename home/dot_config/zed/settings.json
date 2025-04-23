@@ -8,5 +8,14 @@
 // from the command palette or from `Zed` application menu.
 {
   "buffer_font_size": 15,
-  "vim_mode": true
+  "vim_mode": true,
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  }
 }
