@@ -8,7 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "auto_install_extensions": {
+    "cython": true,
     "html": true,
+    "meson": true,
     "toml": true
   },
   "buffer_font_size": 15,
