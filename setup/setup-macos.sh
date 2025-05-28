@@ -84,7 +84,7 @@ fi
 if !(type "rustup" > /dev/null 2>&1); then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-modify-path -y
 fi
-rustup component add rustfmt
+rustup component add rustfmt rust-analyzer
 rustup target add wasm32-unknown-unknown
 rustup target add x86_64-pc-windows-gnu
 rustup target add armv7-unknown-linux-gnueabihf armv7-unknown-linux-musleabihf
