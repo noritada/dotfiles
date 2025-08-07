@@ -1,1 +1,2 @@
 -o "~/tmp/movies/@%(uploader)s%(uploader_id& [{}]|)s/%(title)s [%(id)s].%(ext)s"
+--no-playlist
