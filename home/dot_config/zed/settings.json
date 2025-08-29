@@ -14,6 +14,20 @@
     "toml": true
   },
   "buffer_font_size": 15,
+  "file_scan_exclusions": [
+    // Defaults
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // Additions
+    "**/__pycache__"
+  ],
   "vim_mode": true,
   "lsp": {
     "pyright": {
