@@ -2,3 +2,4 @@
 export PATH="$HOME/.cargo/bin:$PATH"
 
 source "$HOME/.rye/env"
+. "/Users/noritada/.deno/env"
