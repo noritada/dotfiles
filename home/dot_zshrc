@@ -169,4 +169,3 @@ compinit
 
 # }}}
 # vim: set filetype=zsh foldmethod=marker foldlevel=0 :
-. "/Users/noritada/.deno/env"
