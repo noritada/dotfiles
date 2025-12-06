@@ -8,3 +8,4 @@ mdbook completions zsh > _mdbook
 rrr completions zsh > _rrr
 taplo completions zsh > _taplo
 chezmoi completion zsh --output="_chezmoi"
+deno completion zsh > _deno
