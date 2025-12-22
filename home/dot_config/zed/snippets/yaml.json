@@ -6,5 +6,13 @@
       "$0"
     ],
     "description": "Mode line for declaring the use of AWS CloudFormation schema"
+  },
+  "AWS CloudFormation Serverless Application Model (SAM) schema": {
+    "prefix": ["schema", "cloudformation", "sam"],
+    "body": [
+      "# yaml-language-server: \\$schema=https://raw.githubusercontent.com/aws/serverless-application-model/main/samtranslator/schema/schema.json",
+      "$0"
+    ],
+    "description": "Mode line for declaring the use of AWS CloudFormation SAM schema"
   }
 }
