@@ -10,3 +10,4 @@ taplo completions zsh > _taplo
 chezmoi completion zsh --output="_chezmoi"
 deno completion zsh > _deno
 zola completion zsh > _zola
+uv generate-shell-completion zsh > _uv
