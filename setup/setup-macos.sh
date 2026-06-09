@@ -114,6 +114,7 @@ fi
 
 ~/.cargo/bin/uv tool install hatch
 ~/.cargo/bin/uv tool install ruff
+~/.cargo/bin/uv tool install nbcat
 
 # install nodebrew
 curl -L git.io/nodebrew | perl - setup
