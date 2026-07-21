@@ -150,6 +150,22 @@ connect-intra() {
   ssh -N tunnel
   networksetup -setsocksfirewallproxystate Wi-Fi off
 }
+
+# Transfers only the current version of files tracked by Git to the destination.
+# Note that the files will be transferred directly into the destination directory.
+grsync() {
+  (
+    set -e
+    if [ $# != 2 ]; then
+      return 1
+    fi
+
+    local repo="$1"
+    local dst="$2"
+
+    rsync -av --files-from=<(git -C "${repo}" ls-files) "${repo}" "${dst}"
+  )
+}
 # }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.
