@@ -164,6 +164,9 @@ chmod a+rx "${bin_dir}/yt-dlp"
     chmod a+rx git-filter-repo
 )
 
+# install Codex CLI
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+
 zola_dir="${HOME}/ghq/github.com/getzola/zola"
 [ ! -d "${zola_dir}" ] && git clone --depth 1 https://github.com/getzola/zola.git "${zola_dir}"
 (cd "${zola_dir}" && git pull && cargo install --path . --locked)
