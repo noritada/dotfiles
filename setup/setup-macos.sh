@@ -155,6 +155,7 @@ fzf_dir="${HOME}/.fzf"
 
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "${bin_dir}/yt-dlp"
 chmod a+rx "${bin_dir}/yt-dlp"
+curl -sSL https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz | tar xOf - yt-dlp/completions/zsh/_yt-dlp > "${HOME}/.zfunc/_yt-dlp"
 
 # install git-filter-repo
 (
