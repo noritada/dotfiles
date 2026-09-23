@@ -19,23 +19,49 @@
     return;
   }
 
+  const screenshotModeInput = prompt(
+    "スクリーンショット用に、地点名とテーブル以外を非表示にしますか？（はい／いいえ）",
+    "いいえ",
+  );
+  if (screenshotModeInput === null) return;
+
+  const screenshotModeAnswer = screenshotModeInput.trim().toLowerCase();
+  const yesAnswers = ["はい", "yes", "y", "1"];
+  const noAnswers = ["いいえ", "no", "n", "0", ""];
+  if (!yesAnswers.includes(screenshotModeAnswer) && !noAnswers.includes(screenshotModeAnswer)) {
+    alert("「はい」または「いいえ」で入力してください。");
+    return;
+  }
+  const useScreenshotMode = yesAnswers.includes(screenshotModeAnswer);
+
   const TABLE_SELECTOR = "table#tablefix1.data2_s";
   const HIGHLIGHT_CLASS = "jma-rank-highlight";
   const HIDDEN_CLASS = "jma-rank-hidden-column";
   const HIDDEN_ROW_CLASS = "jma-rank-hidden-row";
+  const SCREENSHOT_HIDDEN_CLASS = "jma-screenshot-hidden";
+  const SCREENSHOT_MAIN_CLASS = "jma-screenshot-main";
   const STYLE_ID = "jma-rank-highlight-style";
 
   const table = document.querySelector(TABLE_SELECTOR);
-  if (!table) {
+  const main = document.querySelector("div#main");
+  if (!table || !main) {
     console.warn("JMAの『観測史上1～10位の値』テーブルが見つかりませんでした。");
     return;
   }
 
   // スニペットを再実行しても、前回の加工が残らないようにする。
-  table
-    .querySelectorAll(`.${HIGHLIGHT_CLASS}, .${HIDDEN_CLASS}, .${HIDDEN_ROW_CLASS}`)
+  document
+    .querySelectorAll(
+      `.${HIGHLIGHT_CLASS}, .${HIDDEN_CLASS}, .${HIDDEN_ROW_CLASS}, .${SCREENSHOT_HIDDEN_CLASS}, .${SCREENSHOT_MAIN_CLASS}`,
+    )
     .forEach((element) =>
-      element.classList.remove(HIGHLIGHT_CLASS, HIDDEN_CLASS, HIDDEN_ROW_CLASS),
+      element.classList.remove(
+        HIGHLIGHT_CLASS,
+        HIDDEN_CLASS,
+        HIDDEN_ROW_CLASS,
+        SCREENSHOT_HIDDEN_CLASS,
+        SCREENSHOT_MAIN_CLASS,
+      ),
     );
   document.getElementById(STYLE_ID)?.remove();
 
@@ -51,8 +77,28 @@
     #tablefix1 tr.${HIDDEN_ROW_CLASS} {
       display: none !important;
     }
+    .${SCREENSHOT_HIDDEN_CLASS} {
+      display: none !important;
+    }
+    #main.${SCREENSHOT_MAIN_CLASS} {
+      box-sizing: border-box;
+      padding: 16px !important;
+    }
   `;
   document.head.append(style);
+
+  if (useScreenshotMode) {
+    main.classList.add(SCREENSHOT_MAIN_CLASS);
+
+    const breadcrumbContainer = document.querySelector("div.print > ul.breadcrumb2")?.parentElement;
+    breadcrumbContainer?.classList.add(SCREENSHOT_HIDDEN_CLASS);
+
+    for (const element of main.children) {
+      if (element !== table && element.tagName !== "H3") {
+        element.classList.add(SCREENSHOT_HIDDEN_CLASS);
+      }
+    }
+  }
 
   const rows = [...table.rows];
   const headerRow = rows[0];
