@@ -113,6 +113,7 @@ if !(type "uv" > /dev/null 2>&1); then
 fi
 
 ~/.cargo/bin/uv tool install cfn-lint
+~/.cargo/bin/uv tool install git-filter-repo
 ~/.cargo/bin/uv tool install hatch
 ~/.cargo/bin/uv tool install ruff
 ~/.cargo/bin/uv tool install nbcat
@@ -157,14 +158,6 @@ fzf_dir="${HOME}/.fzf"
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "${bin_dir}/yt-dlp"
 chmod a+rx "${bin_dir}/yt-dlp"
 curl -sSL https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz | tar xOf - yt-dlp/completions/zsh/_yt-dlp > "${HOME}/.zfunc/_yt-dlp"
-
-# install git-filter-repo
-(
-    version="2.38.0"
-    cd "${HOME}/.local/bin"
-    curl -sS -O "https://raw.githubusercontent.com/newren/git-filter-repo/v${version}/git-filter-repo"
-    chmod a+rx git-filter-repo
-)
 
 # install Codex CLI
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
