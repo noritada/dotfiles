@@ -1,0 +1,5 @@
+cfn-lint
+git-filter-repo
+hatch
+nbcat
+ruff

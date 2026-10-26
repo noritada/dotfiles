@@ -112,11 +112,9 @@ if !(type "uv" > /dev/null 2>&1); then
     curl -LsSf https://astral.sh/uv/install.sh | sh
 fi
 
-~/.cargo/bin/uv tool install cfn-lint
-~/.cargo/bin/uv tool install git-filter-repo
-~/.cargo/bin/uv tool install hatch
-~/.cargo/bin/uv tool install ruff
-~/.cargo/bin/uv tool install nbcat
+while read -r tool; do
+  [ -n "$tool" ] && ${HOME}/.cargo/bin/uv tool install "$tool"
+done < python-tools
 
 # install nodebrew
 curl -L git.io/nodebrew | perl - setup
