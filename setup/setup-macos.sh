@@ -122,6 +122,12 @@ curl -L git.io/nodebrew | perl - setup
 # install Deno
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
+# install Zig
+ZIG_DIR="${HOME}/zig"
+mkdir -p "${ZIG_DIR}"
+curl -fsSL https://ziglang.org/download/0.17.0/zig-aarch64-macos-0.17.0.tar.xz | tar -C "${ZIG_DIr}" -xf -
+ln -s "${ZIG_DIR}/zig-aarch64-macos-0.17.0/zig" "${HOME}/.local/bin/zig"
+
 # install Homebrew packages
 BASE_DIR=$(cd $(dirname $0); pwd)
 BREWFILE_PATH="${BASE_DIR}/Brewfile"
