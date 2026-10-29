@@ -170,6 +170,9 @@ zola_dir="${HOME}/ghq/github.com/getzola/zola"
 [ ! -d "${zola_dir}" ] && git clone --depth 1 https://github.com/getzola/zola.git "${zola_dir}"
 (cd "${zola_dir}" && git pull && cargo install --path . --locked)
 
+# install Cargo Lambda
+curl -fsSL https://cargo-lambda.info/install.sh | sh
+
 cargo install --git https://github.com/noritada/grib-rs.git grib-cli
 cargo install --git https://github.com/noritada/rrr-rs.git rrr-cli
 
