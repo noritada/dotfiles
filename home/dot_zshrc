@@ -166,6 +166,54 @@ grsync() {
     rsync -av --files-from=<(git -C "${repo}" ls-files) "${repo}" "${dst}"
   )
 }
+
+# Displays a list of subdirectories directly under the specified directory,
+# separated by line breaks or null characters.
+subdirs() {
+    local target_dir="."
+    local null_separator=false
+
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -z|--null)
+                null_separator=true
+                shift
+                ;;
+            -*)
+                echo "ERROR: unknown option $1" >&2
+                echo "USAGE: subdirs [-z|--null] [DIR]" >&2
+                return 1
+                ;;
+            *)
+                target_dir="$1"
+                shift
+                ;;
+        esac
+    done
+
+    if [[ ! -d "$target_dir" ]]; then
+        echo "ERROR: '$target_dir' is not a valid directory." >&2
+        return 1
+    fi
+
+    if [ "$null_separator" = true ]; then
+        find "$target_dir" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z
+    else
+        find "$target_dir" -mindepth 1 -maxdepth 1 -type d | sort
+    fi
+}
+
+# Reads a directory list separated by null characters from standard input and
+# runs `git pull` in each directory.
+sync-repos() {
+    while IFS= read -r -d '' dir; do
+        if [ -d "$dir" ]; then
+            echo "$dir"
+            (cd $dir && git pull)
+        fi
+    done
+}
+
 # }}}
 # Custom key bindings {{{
 # Backward killing for paths/URLs.

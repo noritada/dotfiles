@@ -1,7 +1,7 @@
 brew deps --installed --tree
 cargo +nightly clippy --workspace && cargo +nightly fmt --all
-for i in ~/ghq/github.com/python/*; do (cd $i && git pull); done
-for i in ~/ghq/github.com/rust*/*; do (cd $i && git pull); done
+subdirs -z ~/ghq/github.com/python | sync-repos
+for i in ~/ghq/github.com/rust*; do subdirs -z $i | sync-repos; done
 git config --get remote.origin.url
 git log --pretty=fuller --stat
 git rebase --committer-date-is-author-date -i
