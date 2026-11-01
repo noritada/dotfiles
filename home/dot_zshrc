@@ -184,4 +184,8 @@ autoload -U compinit
 compinit
 
 # }}}
+# Command history {{{
+fc -R ~/.config/zsh/commands
+
+# }}}
 # vim: set filetype=zsh foldmethod=marker foldlevel=0 :

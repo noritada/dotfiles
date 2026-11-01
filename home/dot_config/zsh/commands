@@ -1,0 +1,11 @@
+brew deps --installed --tree
+cargo +nightly clippy --workspace && cargo +nightly fmt --all
+for i in ~/ghq/github.com/python/*; do (cd $i && git pull); done
+for i in ~/ghq/github.com/rust*/*; do (cd $i && git pull); done
+git config --get remote.origin.url
+git log --pretty=fuller --stat
+git rebase --committer-date-is-author-date -i
+git submodule update --init --recursive
+sam build --beta-features --config-env dev
+sam validate --lint --config-env dev
+(cd ~/ghq/git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux && git fetch && git reset --hard origin/master)
