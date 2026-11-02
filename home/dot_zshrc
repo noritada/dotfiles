@@ -225,7 +225,7 @@ git-unmerged-commits() {
         refs/heads/ |
     while IFS= read -r branch; do
           echo "\e[1;31m ${branch}\e[0m"
-          git --no-pager log --stat "$default_branch..$branch"
+          git --no-pager log --color=always --stat "$default_branch..$branch"
           echo
     done | less -R
 }
