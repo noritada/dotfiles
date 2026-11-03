@@ -1,4 +1,5 @@
 brew deps --installed --tree
+caffeinate -i
 cargo +nightly clippy --workspace && cargo +nightly fmt --all
 subdirs -z ~/ghq/github.com/python | sync-repos
 for i in ~/ghq/github.com/rust*; do subdirs -z $i | sync-repos; done
