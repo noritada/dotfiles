@@ -1,6 +1,7 @@
 brew deps --installed --tree
 caffeinate -i
 cargo +nightly clippy --workspace && cargo +nightly fmt --all
+RUSTDOCFLAGS='--cfg docsrs' cargo +nightly doc --all-features --no-deps --release
 subdirs -z ~/ghq/github.com/python | sync-repos
 for i in ~/ghq/github.com/rust*; do subdirs -z $i | sync-repos; done
 git config --get remote.origin.url
